@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amin</title>
+</head>
+<body>
+    <p id="location"></p>
+
+    <script>
+        navigator.geolocation.getCurrentPosition(
+            function(position) {
+                document.getElementById("location").innerText = 
+                    position.coords.latitude + "," + position.coords.longitude;
+            }
+        );
+    </script>
+</body>
+</html>
